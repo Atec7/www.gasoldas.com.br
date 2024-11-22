@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA SOLDAS E MANUTENÇÕES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #F3F4F6;
+        }
+        header {
+            background-color: #1F1F1F;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 10px solid #FFD700;
+            animation: borderColorChange 2s infinite alternate;
+        }
+        @keyframes borderColorChange {
+            0% {
+                border-color: #FFD700;
+            }
+            100% {
+                border-color: #000000;
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            flex-wrap: nowrap;
+        }
+        nav a {
+            color: #FFD700;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            flex: 1;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 2.5s ease-out;
+        }
+        .btn-download, .btn-budget {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #FFD700;
+            color: #1F1F1F;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-download:hover, .btn-budget:hover {
+            background-color: #e6b800;
+        }
+        footer {
+            background-color: #1F1F1F;
+            color: #FFD700;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: #FFD700;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #e6b800;
+        }
+        .clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .clients-track {
+            display: flex;
+            animation: slide 190s linear infinite;
+        }
+        .clients img {
+            width: 150px;
+            margin: 0 20px;
+            border-radius: 50%;
+            border-style: solid;
+            border: 10px solid;
+            border-color: #e6b800;
+        }
+        .local{
+          width: 100%;
+          height: 2%;
+          border-radius: 5px;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+            nav a {
+                padding: 10px;
+                text-align: center;
+                flex: 1;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+            section {
+                padding: 15px;
+            }
+            footer {
+                padding: 5px;
+                font-size: 9px;
+            }
+            .logo {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Logo GA SOLDAS E MANUTENÇÕES" class="logo">
+    </header>
+    <nav>
+        <a href="index.html"><b>Início</b></a>
+        <a href="servicos.html"><b>Serviços</b></a>
+        <a href="contato.html"><b>Contato</b></a>
+    </nav>
+    <section id="home">
+        <h2>Bem-vindo à<br>GA SOLDAS E MANUTENÇÕES </h2>
+        <p>Somos especialistas em soldas e manutenções de alta qualidade. Nossa equipe está pronta para atender suas necessidades.</p>
+        <a href="https://link-para-o-portifolio.com" class="btn-download" target="_blank">Baixar Portfólio</a>
+        <h2>Nossos Horários</h2>
+        <p>Segunda a Sexta das <b>07:00am | 18:00pm.</b></p>
+        <p>Sábados e Feriados das <b>09:00am | 18:00pm.</b></p><br>
+    </section>
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <p>Oferecemos uma ampla gama de serviços de soldagem e manutenção para
+        diferentes setores industriais, residenciais, agrícolas, entre outros...</p>
+        <a href="orcamento.html" class="btn-budget" target="_blank">Solicitar Orçamento</a>
+    </section>
+    <section id="clients">
+        <h2>Alguns dos nossos clientes</h2>
+        <div class="clients">
+            <div class="clients-track">
+              <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+                <img src="cliente1.jpg" alt="Cliente 1">
+                <img src="cliente2.jpg" alt="Cliente 2">
+                <img src="cliente3.jpeg" alt="Cliente 3">
+                <img src="cliente4.jpeg" alt="Cliente 4">
+                <img src="cliente1.jpg" alt="Cliente 5">
+                <img src="cliente2.jpg" alt="Cliente 6">
+                <img src="cliente3.jpeg" alt="Cliente 7">
+                <img src="cliente4.jpeg" alt="Cliente 8">
+                <img src="cliente1.jpg" alt="Cliente 9">
+                <img src="cliente2.jpg" alt="Cliente 10">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Onde Estamos Localizados?</h2>
+        <p>R. Mte. Luiz Freitas Q 10, 7 - Primavera, Rio Verde - GO, 75904-844</p>
+        <a href="https://maps.app.goo.gl/D9bbTM492hCNcf8t5" class="btn-download"
+        target="_blank">Abrir no Google Maps</a>
+        <br>
+        <img class="local" src="local.jpg">
+        </section>
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações sobre nossos
+        serviços.<br>
+        <h3>Telefone Comercial</h3>
+            <p>(64) 9 9647-1930</p>
+        </div>
+        <div class="contact-card">
+            <h3>Email Comercial</h3>
+            <p>gasoldas3@gmail.com</p></p>
+        <div class="social-icons">
+            <a href="https://wa.me/5564996471930?text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20voc%C3%AAs%20e%20pedir%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F%0A%0AObrigado!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/g.a_soldas_manutencoes/profilecard/?igsh=emMyeHBpYnBmemZ2" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/NOME_DO_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/share/14rPXQVH1C/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </section>
+    <footer>
+        <p1>&copy; 2024 GA SOLDAS E MANUTENÇÕES.</p1><br>
+         12.972.641/0001-97<br>
+         R. Mte. Luiz Freitas Q 10, 7 - Primavera, Rio Verde - GO, 75904-844<br>
+        <p1>PowerBy • www.atecseven.com.br</p1>
+    </footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p></p>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
